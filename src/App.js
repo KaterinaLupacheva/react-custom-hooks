@@ -10,13 +10,12 @@ function App() {
       <button ref={topRef} onClick={smoothScroll}>
         Scroll
       </button>
-      <div
-        style={{ marginTop: "150vh", marginBottom: "20vh" }}
-        ref={refToScroll}
-      >
+      <div style={{ marginTop: "150vh" }} ref={refToScroll}>
         I wanna be seen
       </div>
-      <button onClick={smoothScrollToTop}>Go UP</button>
+      <button onClick={smoothScrollToTop} style={{ margin: "20vh" }}>
+        Go UP
+      </button>
     </div>
   );
 }
