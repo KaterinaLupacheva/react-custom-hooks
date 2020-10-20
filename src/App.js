@@ -7,15 +7,14 @@ function App() {
   const [refToScroll, smoothScroll] = useSmoothScroll();
   const [topRef, smoothScrollToTop] = useSmoothScroll();
 
-  const [, setDocTitle] = useDocTitle("TEST");
+  const [docTitle, setDocTitle] = useDocTitle("test");
+
   return (
     <div className="App">
       <button ref={topRef} onClick={smoothScroll}>
         Scroll
       </button>
-      <button onClick={() => setDocTitle("Start Page")}>
-        Change doc title
-      </button>
+      <button onClick={() => setDocTitle("start")}>Change doc title</button>
       <div style={{ marginTop: "150vh" }} ref={refToScroll}>
         I wanna be seen
       </div>

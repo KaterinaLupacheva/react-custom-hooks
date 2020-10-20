@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import useRoute from "./useRoute";
 
 const useDocTitle = (title) => {
   const [docTitle, setDocTitle] = useState(title);
+  const [route, setRoute] = useRoute();
 
   useEffect(() => {
     document.title = docTitle;
+    setRoute(docTitle);
   }, [docTitle]);
 
   return [docTitle, setDocTitle];
