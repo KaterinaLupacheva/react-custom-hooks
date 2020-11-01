@@ -3,7 +3,7 @@ import useRoute from "./useRoute";
 
 const useDocTitle = (title) => {
   const [docTitle, setDocTitle] = useState(title);
-  const [route, setRoute] = useRoute();
+  const [, setRoute] = useRoute();
 
   useEffect(() => {
     document.title = docTitle;

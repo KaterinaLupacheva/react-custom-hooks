@@ -7,7 +7,7 @@ function App() {
   const [refToScroll, smoothScroll] = useSmoothScroll();
   const [topRef, smoothScrollToTop] = useSmoothScroll();
 
-  const [docTitle, setDocTitle] = useDocTitle("test");
+  const [, setDocTitle] = useDocTitle("test");
 
   return (
     <div className="App">
@@ -18,9 +18,7 @@ function App() {
       <div style={{ marginTop: "150vh" }} ref={refToScroll}>
         I wanna be seen
       </div>
-      <button onClick={smoothScrollToTop} style={{ margin: "20vh" }}>
-        Go UP
-      </button>
+      <button onClick={smoothScrollToTop}>Go UP</button>
     </div>
   );
 }
